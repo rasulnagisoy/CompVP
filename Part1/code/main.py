@@ -17,7 +17,7 @@ from torch.utils.data import DataLoader
 # Create DataLoaders for each month_age
 data_loaders = []  # List to hold DataLoaders
 for month_age in month_ages:
-    data_loader = DataLoader(va_datasets[month_age], batch_size=32, shuffle=True)
+    data_loader = DataLoader(va_datasets[month_age], batch_size=32, shuffle=False)
     data_loaders.append(data_loader)
 
 def show_first_image_from_loader(data_loader):
@@ -34,6 +34,9 @@ def show_first_image_from_loader(data_loader):
         break  # Only show the first image
 
 # Call the function to display the first image from data_loader[0]
-# show_first_image_from_loader(data_loaders[0])
+show_first_image_from_loader(data_loaders[0])
+show_first_image_from_loader(data_loaders[4])
+show_first_image_from_loader(data_loaders[8])
+show_first_image_from_loader(data_loaders[11])
 print(len(data_loaders), data_loaders)
 pass
